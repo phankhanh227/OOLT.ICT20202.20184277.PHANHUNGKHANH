@@ -20,11 +20,11 @@ public class ex6_4 {
 		if(str=="December"||str=="Dec."||str=="Dec"||str=="12") a=12;
 		
 		System.out.println("Enter the year: ");int y=sc.nextInt();
-		System.out.println(a);
+		//System.out.println(a);
 		switch(a)
 		{
-		/*case 1:case 3: case 5: case 7: case 8: case 10: case 12: {System.out.println(a+"/"+y+" have 31 days");break;}
-		case 4:case 6: case 9:case 11: {System.out.println(a+"/"+y+" have 30 days");break;}*/
+		case 1:case 3: case 5: case 7: case 8: case 10: case 12: {System.out.println(a+"/"+y+" have 31 days");break;}
+		case 4:case 6: case 9:case 11: {System.out.println(a+"/"+y+" have 30 days");break;}
 		case 2:{
 			if(y%4==0) System.out.println(a+"/"+y+" have 29 days");
 			else System.out.println(a+"/"+y+" have 28 days");
