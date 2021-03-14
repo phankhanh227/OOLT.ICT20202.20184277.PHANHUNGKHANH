@@ -1,8 +1,9 @@
-import java.lang.Object;
-public class Cart {
+
+
+public class Cart extends DigitalVideoDisc {
 	private int qtyOrdered;
 	public static final int MAX_NUMBERS_ORDERED = 20;
-	private DigitalVideoDisc itemsOrdered[]= new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
+	public DigitalVideoDisc [] itemsOrdered= new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
 	
 	public void addDigitalVideoDisc(DigitalVideoDisc disc)
 	{
@@ -10,11 +11,12 @@ public class Cart {
 		else
 		{
 			qtyOrdered++;
-			itemsOrdered[qtyOrdered].setTitle(disc.getTitle());
+			/*itemsOrdered[qtyOrdered].setTitle(disc.getTitle());
 			itemsOrdered[qtyOrdered].setCategory(disc.getCategory());
 			itemsOrdered[qtyOrdered].setDirector(disc.getDirector());
 			itemsOrdered[qtyOrdered].setLength(disc.getLength());
-			itemsOrdered[qtyOrdered].setCost(disc.getCost());
+			itemsOrdered[qtyOrdered].setCost(disc.getCost());*/
+			itemsOrdered[qtyOrdered] = new DigitalVideoDisc(disc.getTitle(),disc.getCategory(),disc.getDirector(),disc.getLength(),disc.getCost());
 			System.out.println( "The disc has been added !");
 		}
 	}
@@ -36,10 +38,11 @@ public class Cart {
 	public float totalCost()
 	{
 		float cost=0;
-		for(int i=0;i<qtyOrdered;i++)
+		for(int i=1;i<=qtyOrdered;i++)
 		{
-			cost+=itemsOrdered[qtyOrdered].getCost();
+			cost+=itemsOrdered[i].getCost();
 		}
 		return cost;
 	}
 }
+

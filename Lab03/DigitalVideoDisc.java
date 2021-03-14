@@ -1,10 +1,22 @@
 
+
 public class DigitalVideoDisc {
+
 		private String title;
 		private String category;
 		private String director;
 		private int length;
 		private float cost;
+		
+		
+		public DigitalVideoDisc() {
+			//super();
+			this.title="";
+			this.category="";
+			this.director="";
+			this.length=0;
+			this.cost=0;
+		}
 		
 		public DigitalVideoDisc(String title,String category,String director,int length, float cost)
 		{
@@ -74,3 +86,4 @@ public class DigitalVideoDisc {
 		
 	
 }
+
