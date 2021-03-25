@@ -89,6 +89,11 @@ public class DigitalVideoDisc1 {
 			this.cost = cost;
 		}
 		
+		public String getDetail()
+		{
+			String s= this.getTitle()+" "+this.getCategory()+" "+this.getDirector()+" "+this.getLength()+": "+this.getCost()+"$";
+			return s;
+		}
 		
 	
 }
