@@ -3,6 +3,8 @@ package hust.soict.globalict.aims.media;
 import java.util.ArrayList;
 import java.util.List;
 
+import hust.soict.globalict.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
+
 public class Book extends DigitalVideoDisc {
 	private int id;
 	private String title;
@@ -20,40 +22,12 @@ public class Book extends DigitalVideoDisc {
 		this.authors = authors;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getCategory() {
-		return category;
-	}
-
-	public void setCategory(String category) {
-		this.category = category;
-	}
-
-	public float getCost() {
-		return cost;
-	}
-
-	public void setCost(float cost) {
-		this.cost = cost;
-	}
-
 	public List<String> getAuthors() {
 		return authors;
+	}
+
+	public void setAuthors(List<String> authors) {
+		this.authors = authors;
 	}
 
 	public void addAuthors(String authorName) {
@@ -73,7 +47,14 @@ public class Book extends DigitalVideoDisc {
 	}
 	
 	public void removeAuthor(String authorName) {
-		
+		int i=0;
+	
+		for(String s : this.getAuthors())
+		{
+			if (s.compareTo(authorName)==0) 
+				{ this.getAuthors().remove(i);}
+			i++;
+			}
 	}
 	
 	
